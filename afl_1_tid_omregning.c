@@ -18,7 +18,7 @@ int main(void)
     output_week = sec_input / sec_week;
     //Dividerer resten af user input med sekunder på en dag
     output_day = (sec_input % sec_week) / sec_day;
-    //Osv.
+    //osv.
     output_hour = (sec_input % sec_day) / sec_hour;
     output_min = (sec_input % sec_hour) / sec_min;
     output_sec = (sec_input % sec_min);
