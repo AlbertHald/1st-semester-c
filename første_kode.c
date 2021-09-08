@@ -22,5 +22,6 @@ int main()
     }
     else
         printf("M skal vaere stoerre end N!");
+        printf("Hello World");
     return 0;
 }
