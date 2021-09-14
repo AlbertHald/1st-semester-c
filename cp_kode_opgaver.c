@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void) {
+  int age, year, speed, y, x, z, w, k, n, between,
+  divisor, digit, num, lowercase, ch, item, product;
+  double water;
+  /* Age is from 18 to 21 inclusive */
+  18 <= age <= 21;
+  /* Water is less than 1.5 and also greater than 0.1 */
+  1.5 > water > 0.1;
+  /* year is divisible by 4 */
+  year % 4 == 0;
+  /*speed is not greater than 55 */
+  speed <= 55;
+  /* yis greater than x and less than z */
+  x < y < z;
+  /* w is either equal to 6 or not greater than 3 */
+  w == 6 || w >= 3;
+
+  /*OPGAVE 2 
+  Assign a value of 0 to int between if n is less than -k or greater than +k; otherwise, assign 1*/
+  if (n < -k || n > +k)
+  {
+    between = 0;
+  }
+  else{
+    between = 1;
+  }
+  /* Anden måde at gøre det på når det kun er 0 og 1, altså true or false */
+  between = !(n < -k || n > +k);
+  between = (n < -k || n > +k);
+
+  /* Assign a value to int divisor is int digit is a divior of num; otherwise assign a value of 0 */
+  if (num % digit == 0)
+  {
+    divisor = 1;
+  }
+  else{
+    divisor = 0;
+  }
+  /* Assign a value of 1 to lowercase if ch is a lowercase letter; otherwise, assign a value of 0 */
+ if ("a" <= ch && "z" >= ch)
+ {
+   lowercase = 1;
+ }
+  else{
+    lowercase = 0;
+  }
+
+  if (item != 0)
+  {
+    product = product * item;
+    printf("%d", &product);
+  }
+  else
+  {
+    print("%d", &product);
+  }
+  
+  return 0;
+}
