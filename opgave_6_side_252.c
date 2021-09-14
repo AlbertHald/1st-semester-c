@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(void)
 {
@@ -11,7 +12,7 @@ int main(void)
     printf("Skriv din y-værdi i kommatal > ");
     scanf(" %f", &y);
 
-    if (x != 0.0 || y != 0.0)
+    if (x != 0.0 && y != 0.0)
     {
         /* Første kvadrat */
         if(x > 0.0 && y > 0.0)
