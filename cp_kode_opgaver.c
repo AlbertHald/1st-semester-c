@@ -7,7 +7,7 @@ int main(void) {
   divisor, digit, num, lowercase, ch, item, product;
   double water;
   /* Age is from 18 to 21 inclusive */
-  18 <= age <= 21;
+  18 <= age && age <= 21;
   /* Water is less than 1.5 and also greater than 0.1 */
   1.5 > water > 0.1;
   /* year is divisible by 4 */
@@ -15,7 +15,7 @@ int main(void) {
   /*speed is not greater than 55 */
   speed <= 55;
   /* yis greater than x and less than z */
-  x < y < z;
+  x < y && y < z;
   /* w is either equal to 6 or not greater than 3 */
   w == 6 || w >= 3;
 
@@ -58,6 +58,41 @@ int main(void) {
   {
     print("%d", &product);
   }
-  
+  /* Store the absolute difference of x and y in y */
+  if (x < y)
+  {
+    y = (y-x);
+  }
+  else{
+    y = (x-y);
+  }
+
+
+  /* Brug af switch */
+  /* Write a switch statement that assigns to the variable lumens the expected brightness of an 
+  incandescent light bulb whose wattage has been stored in watts (Se table på side 243)*/
+  int watts, lumens;
+  switch (watts)
+  {
+  case 15:
+    lumens = 125;
+    break;
+  case 25:
+    lumens = 215;
+    break;
+  case 40:
+    lumens = 500;
+    break;
+  case 60:
+    lumens = 880;
+    break;
+  case 75:
+    lumens = 1000;
+    break;
+  case 100:
+    lumens = 1675;
+  default:
+    lumens = -1;
+  } 
   return 0;
 }
