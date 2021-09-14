@@ -7,10 +7,10 @@ int main(void)
     double x,y;
     /* Indtast de to punkter */
     printf("Skriv din x-værdi i kommatal > ");
-    scanf(" %f", &x);
+    scanf(" %lf", &x);
 
     printf("Skriv din y-værdi i kommatal > ");
-    scanf(" %f", &y);
+    scanf(" %lf", &y);
 
     if (x != 0.0 && y != 0.0)
     {
@@ -53,6 +53,6 @@ int main(void)
     }
     else{
         printf("Skriv noget ordenligt");
-    }
+    } 
     return 0;
 }
