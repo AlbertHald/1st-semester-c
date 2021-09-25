@@ -94,5 +94,19 @@ int main(void) {
   default:
     lumens = -1;
   } 
+
+  /* Opgave 6 side 275 */
+  int mult4;
+  for(mult4 = 0; mult4 < 100; mult4 += 4){
+    printf("%d", mult4);
+  }
+  /* Programmeringsopgave 1 side 267 */
+  int n, n_sum;
+  n_sum = 0;
+  n = 0;
+  scanf("%d", &n);
+  
   return 0;
 }
+
+
