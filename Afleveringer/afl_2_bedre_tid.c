@@ -72,9 +72,10 @@ int main(void)
     }
    
     /* Hvis 0 indtastes */
-    else if (sek_input == 0)
+    if (sek_input == 0)
     {
         printf("0 Sekunder");
     }
+    
     return 0;
 }
