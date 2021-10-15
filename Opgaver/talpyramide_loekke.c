@@ -4,26 +4,30 @@ Hvilken form for løkke er mest oplagt */
 #include <stdlib.h>
 #include <math.h>
 
-#define MAX_ROWS 5
 
 int main(void)
 {
-    int rows = 0, tjekker = 5;
-    for (rows = 0; rows < MAX_ROWS; rows++)
+    int rows = 0, max_rows;
+    scanf(" %d", &max_rows);
+    int tjekker = max_rows;
+    for (rows = 0; rows < max_rows; rows++)
     {
         for ( int number = 0; number <= rows; number++)
-        printf("%d ", number);
+        {
+            printf("%d ", number);
+        }
         printf("\n");
     }
-        for ( int number = rows; number >= 0; number--)
+        
+    for ( int number = rows; number >= 0; number--)
+    {
+        for (int number = 0; number <= tjekker; number++)
         {
-           for (int number = 0; number <= tjekker; number++)
-           {
-               printf("%d ", number);
-           }
-           printf("\n");
-           tjekker--;
+            printf("%d ", number);
         }
+        printf("\n");
+        tjekker--;
+    }
 
     return 0;
 }
