@@ -32,11 +32,11 @@ void solveQuadraticEquation(double a, double b, double c){
     }
     else if(discriminant == 0)
     {
-        printf("The root is: %lf\n", &answer_root1);
+        printf("The root is: %lf\n", answer_root1);
     }
     else
     {
-        printf("The roots are: %lf and %lf\n", &answer_root1, &answer_root2);
+        printf("The roots are: %lf and %lf\n", answer_root1, answer_root2);
     }
 }   
 
