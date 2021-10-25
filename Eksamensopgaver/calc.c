@@ -1,35 +1,38 @@
+//Navn: Albert Hald Christensen     ID: albchr21@student.aau.dk
+//Studieretning: Software           Gruppe: 226
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 double runCalculator(void);
 void inputCalc(char *operant, double *operator);
-void calculator(char operator, double operant, double *akkumulator);
-void squareRoot(double *akkumulator);
-void division(double *akkumulator, double operant);
+void calculator(char operator, double operant, double *accumulator);
+void squareRoot(double *accumulator);
+void division(double *accumulator, double operant);
 
 int main(void)
 {
-    double answer = runCalculator(); 
-    printf("Answer: %lf", answer);
+    printf("Answer: %lf", runCalculator());
     return EXIT_SUCCESS;
 }
 
 double runCalculator(void){
     int run_program = 1;
-    double akkumulator = 0.0, operant;
+    double accumulator = 0.0, operant;
     char operator;
+    printf("The calculator is running\n0\n");
     while(run_program)
     {
         inputCalc(&operator, &operant);
-        calculator(operator, operant, &akkumulator);
+        calculator(operator, operant, &accumulator);
         //Stops the calulator and sets the final answer
         if(operator == 'q')
         {
             run_program = 0;  
-            return akkumulator;
+            return accumulator;
         }
-        printf("Your current value is %lf\n", akkumulator);
+        printf("Your current value is %lf\n", accumulator);
     } 
 }
 
@@ -60,61 +63,59 @@ void inputCalc(char *operator, double *operant){
             printf("Input is not valid! Write valid inputs >");
         }
     }
-    //Hvis unær så skal scanf være 0
 }
 
-//The input is calculated and send back as a new akkumulator value
-void calculator(char operator, double operant, double *akkumulator){
+//The input is calculated and send back as a new accumulator value
+void calculator(char operator, double operant, double *accumulator){
 
+    //
     switch (operator)
     {
     //Unary cases
     case '#':
-        squareRoot(akkumulator);
+        squareRoot(accumulator);
         break;
     case '%':
-        *akkumulator = -1 * *akkumulator;
+        *accumulator = -1 * *accumulator;
         break;
     case '!':
-        *akkumulator = 1 / *akkumulator;
+        *accumulator = 1 / *accumulator;
         break;
     case 'q':
-        *akkumulator;
+        *accumulator;
         break;
     //Binary cases
     case '+':
-        *akkumulator += operant;
+        *accumulator += operant;
         break;
     case '-':
-        *akkumulator -= operant;
+        *accumulator -= operant;
         break;
     case '*':
-        *akkumulator *= operant;
+        *accumulator *= operant;
         break;
     case '/':
-        division(akkumulator, operant);
+        division(accumulator, operant);
         break;
     case '^':
-        *akkumulator = pow(*akkumulator, operant);
+        *accumulator = pow(*accumulator, operant);
         break;
     default:
         break;
     }
 }
-
-void squareRoot(double *akkumulator){
-    if(*akkumulator > 0)
+//If 0 or lower it does nothing to the accumulator
+void squareRoot(double *accumulator){
+    if(*accumulator > 0)
     {
-        *akkumulator = sqrt(*akkumulator);
+        *accumulator = sqrt(*accumulator);
     }
 }
 
-void division(double *akkumulator, double operant){
+//You can not divide by 0. If 0 then the accumulator is not chanced.
+void division(double *accumulator, double operant){
     if (operant != 0)
     {
-        *akkumulator /= operant;
+        *accumulator /= operant;
     }  
 }
-
-
-
