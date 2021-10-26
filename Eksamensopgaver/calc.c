@@ -44,7 +44,7 @@ void inputCalc(char *operator, double *operant){
     {
         //Operator input
         scanf(" %c", operator);
-        //If its a unary operator
+        //If its a unary operator. If yes the operant is set to 0 
         if(*operator == '#' || *operator == '%' || *operator == '!' || *operator == 'q')
         {
             *operant = 0.0;
