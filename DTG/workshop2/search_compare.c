@@ -107,10 +107,13 @@ int BinSearch(int array[], int x){
   while (i < j)
   {
       m = floor((i + j) / 2);
+      //If the number searched for is bigger than the arraylocation +1 
+      //to get to the lowest in the higher value array.
       if (x > array[m])
       {
           i = m + 1;
       }
+      //Set set
       else
       {
           j = m;
