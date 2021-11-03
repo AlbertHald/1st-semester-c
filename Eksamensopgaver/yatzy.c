@@ -7,17 +7,16 @@
 #define YATZY_ROUNDS 16
 
 int amountOfDice();
-int sumSection(int);
+int playYatzy(int*, int);
+int rollDice(int *dice_array, int dice_ammount);
 
 int main(void)
 {
     //How many dice would you like?
     int dice_ammount = amountOfDice();
-    printf("\nDice > %d", dice_ammount);
-
     int *score = (int*) malloc(YATZY_ROUNDS * sizeof(int));
     //Rolls the dice
-    playYatzy();
+    playYatzy(score, dice_ammount);
     //Play sum section
     //sumSection();
     //Play lower section
@@ -25,6 +24,7 @@ int main(void)
     free(score);
     return EXIT_SUCCESS;
 }
+
 
 int amountOfDice(){
     int dice = 0;
@@ -41,7 +41,22 @@ int amountOfDice(){
     return dice;
 }
 
-int sumSection(int dice_ammount)
+int playYatzy(int *score, int dice_ammount)
 {
-    return dice_ammount;
+    int *dice_array = (int*)malloc(dice_ammount * sizeof(int));
+    //Plays upperpart, shall return the score to the elements in the "score" array
+    void playUpperPart();
+    //Plays lowerpart
+
+    //Give a final score
+    free(dice_array); 
+}
+
+//Should return the array but with randomized numbers
+int rollDice(int *dice_array, int dice_ammount){
+    for (int current_dice = 0; current_dice < dice_ammount; current_dice++)
+    {
+        *dice_array[current_dice] = (rand() % 5) + 5; 
+    }
+    
 }
