@@ -39,6 +39,8 @@ int main(void)
     int *score = (int*) malloc(YATZY_ROUNDS * sizeof(int));
     
     playYatzy(score, dice_ammount);
+
+    //Gives a final score
     scoreBoard(score);
 
     free(score);
@@ -85,8 +87,6 @@ void playYatzy(int score[], int dice_ammount)
 
     playYatzyRound(dice_array, dice_ammount, score);
     
-    //Gives a final score
-    scoreBoard(score);
     free(dice_array); 
 }
 
@@ -170,16 +170,17 @@ void playTwoPairs(int dice_array[], int dice_ammount, int score[]){
     score[8] = 0;
     int rolls_array[] ={0,0,0,0,0,0};
     int curr_array_pos = 5;
-    int found_pair = 0;
+    int found_pairs = 0;
     
     rollDice(dice_array, dice_ammount);
     countDice(dice_array, rolls_array, dice_ammount);
     
     //Looks for the two highest pairs in the counted array
-    while (found_pair < 2 && curr_array_pos >= 0){
+    while (found_pairs < 2 && curr_array_pos >= 0){
         if (rolls_array[curr_array_pos] >= 2)
         {
             score[8] += ((curr_array_pos + 1) * 2);
+            ++found_pairs;
         }
         --curr_array_pos;
     }
