@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-struct Fractions
-{
+struct Fractions {
     int numerator;
     int denuminator;
 };
@@ -16,8 +15,7 @@ multiplyFractionAndNum();
 multiplyFractions();
 addFractions();
 
-int main(void)
-{
+int main(void) {
     Fractions frac;
 
     printf("Input numerator > ");
@@ -29,7 +27,7 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-void shortenFraction(Fractions frac){
+void shortenFraction(Fractions frac) {
     
 }
 

@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int main(void)
-{
+int main(void) {
     int dividend, divisor;
     printf("Type dividend > ");
     scanf(" %d", &dividend);
@@ -17,10 +16,11 @@ int main(void)
 
 
 int division(int divident, int divisor) {
-    if (/* condition */)
-    {
-        
-    }
-    
+
+    return division(divident - divisor, divisor);
 }
 //Function that recursivly divides by using the "-" operator 
+
+int modulus(int divident, int divisor) {
+    
+}
