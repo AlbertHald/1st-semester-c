@@ -21,8 +21,7 @@ int main(void)
         int min_input = (input_1 < input_2) ? input_1 : input_2;
         
         /* Tjekker om et af de indtastet tal er 0 */
-        if (min_input == 0)
-        {
+        if (min_input == 0) {
             pos_divisor = max_input;
             NumFound = 1;
         }
@@ -30,14 +29,11 @@ int main(void)
         /* Kører fra det laveste af de to tal og ned til 0.
         Stopper ved den første (største) divisor for begge */
         pos_divisor = min_input;
-        while (!NumFound)
-        {
-            if (max_input % pos_divisor == 0 && min_input % pos_divisor == 0)
-            {
+        while (!NumFound) {
+            if (max_input % pos_divisor == 0 && min_input % pos_divisor == 0) {
                 NumFound = 1;
             }    
-            else
-            {
+            else {
                 pos_divisor--;
             }         
         }
