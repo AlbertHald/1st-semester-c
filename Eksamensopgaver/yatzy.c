@@ -142,8 +142,6 @@ void bonusPoints(int score[]){
     {
         score[6] = 0;
     }
-    
-    
 }
 
 //A function that looks for the highest pair.
