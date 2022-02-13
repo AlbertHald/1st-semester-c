@@ -84,16 +84,13 @@ int LinSearch(int array[], int x){
   int i=0;
   /* Fill in your code HERE! */
   //While i is less than the lentgh of the list and x is not equal to the the position i in the array
-  while (i < N && x != array[i])
-  {
+  while (i < N && x != array[i]) {
       i++;
   }
-  if (i < N)
-  {
+  if (i < N) {
       return i;
   }
-  else
-  {
+  else {
       return 0;
   }
   

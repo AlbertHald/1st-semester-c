@@ -28,14 +28,16 @@ int main(void)
         
         /* Kører fra det laveste af de to tal og ned til 0.
         Stopper ved den første (største) divisor for begge */
-        pos_divisor = min_input;
-        while (!NumFound) {
-            if (max_input % pos_divisor == 0 && min_input % pos_divisor == 0) {
-                NumFound = 1;
-            }    
-            else {
-                pos_divisor--;
-            }         
+        else {
+            pos_divisor = min_input;
+            while (!NumFound) {
+                if (max_input % pos_divisor == 0 && min_input % pos_divisor == 0) {
+                    NumFound = 1;
+                }    
+                else {
+                    pos_divisor--;
+                }         
+            }
         }
         printf("GCD for de to tal %d og %d er derfor: %d \n", max_input, min_input, pos_divisor); 
         /* Skal programmet køres igen? */

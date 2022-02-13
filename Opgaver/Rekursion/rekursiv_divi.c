@@ -17,6 +17,7 @@ int main(void) {
 
 int division(int divident, int divisor) {
 
+    
     return division(divident - divisor, divisor);
 }
 //Function that recursivly divides by using the "-" operator 
