@@ -29,9 +29,7 @@ void countDice(int dice_array[], int rolls_array[], int dice_ammount);
 void scoreBoard(int score[]);
 int finalScore(int score[]);
 
-
-int main(void)
-{   
+int main(void) {   
     //Seeding
     srand(time(0));
     //How many dice would you like?
